@@ -1,19 +1,14 @@
 package com.example.home.ApacheCamelEureka.router;
 
-import gs_producing_web_service.Country;
 import gs_producing_web_service.GetCountryRequest;
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.converter.jaxb.JaxbConstants;
 import org.apache.camel.dataformat.soap.SoapJaxbDataFormat;
 import org.apache.camel.model.rest.RestBindingMode;
-import org.apache.camel.spi.DataFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
-
-import java.util.HashMap;
 
 @Component
 public class MockRouter extends RouteBuilder {
